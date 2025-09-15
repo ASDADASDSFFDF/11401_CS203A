@@ -10,7 +10,7 @@
 - **name:** 張景翔
 - **student ID:** 1131548
 - **GitHub account:** https://github.com/ASDADASDSFFDF
-- **Course Repository URL:**https://github.com/ASDADASDSFFDF/11401_CS203A/tree/main
+- **Course Repository URL:** https://github.com/ASDADASDSFFDF/11401_CS203A/tree/main
 - **Personal Website Repository:** 張景翔.github.io
 - **Repository description:**
 
