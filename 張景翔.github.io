@@ -21,7 +21,6 @@ HugeInt::HugeInt(long num) {
         num /= 10;
     }
 }
-
 // Constructor from string
 HugeInt::HugeInt(const string& numStr) {
     int len = numStr.length();
@@ -30,12 +29,10 @@ HugeInt::HugeInt(const string& numStr) {
         integer[pos + i] = numStr[i] - '0';
     }
 }
-
 // Addition operator
 HugeInt HugeInt::operator+(const HugeInt& other) const {
     HugeInt result;
     int carry = 0;
-
     for (int i = digits - 1; i >= 0; --i) {
         int sum = integer[i] + other.integer[i] + carry;
         result.integer[i] = sum % 10;
@@ -43,12 +40,10 @@ HugeInt HugeInt::operator+(const HugeInt& other) const {
     }
     return result;
 }
-
 // Subtraction operator
 HugeInt HugeInt::operator-(const HugeInt& other) const {
     HugeInt result;
     int borrow = 0;
-
     for (int i = digits - 1; i >= 0; --i) {
         int diff = integer[i] - other.integer[i] - borrow;
         if (diff < 0) {
@@ -62,7 +57,6 @@ HugeInt HugeInt::operator-(const HugeInt& other) const {
     }
     return result;
 }
-
 // Overload output stream operator
 ostream& operator<<(ostream& out, const HugeInt& num) {
     int i = 0;
@@ -79,7 +73,6 @@ ostream& operator<<(ostream& out, const HugeInt& num) {
     }
     return out;
 }
-
 int main() {
     string a, b, op;
     while (cin >> a >> op >> b) {
