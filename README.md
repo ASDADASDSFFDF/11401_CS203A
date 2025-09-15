@@ -12,5 +12,7 @@
 - **GitHub account:** https://github.com/ASDADASDSFFDF
 - **Course Repository URL:** https://github.com/ASDADASDSFFDF/11401_CS203A/tree/main
 - **Personal Website Repository:** 張景翔.github.io
-- **Repository description:**
-
+- **Personal Website Repository:** ASDADASDSFFDF.github.io
+- **Personal Website Repository URL:** https://github.com/ASDADASDSFFDF/ASDADASDSFFDF.github.io/blob/main/index.html
+- **GitHub Pages:** https://github.com/ASDADASDSFFDF
+- **Personal Website:** https://asdadasdsffdf.github.io/
