@@ -1,51 +1,40 @@
-# Data Structures: Introduction
+# 簡介
 
-## Data Structures
-A data structure (DS) is a way of organizing data so that it can be used effectively.
-
-## Classification of Data Structures
-### Static Data Structures
-- It is a data structure with a fixed memory size and is easier to access.
-### Dynamic Data Structures
-- Here, the size of memory is not fixed.
-- Additionally, it can be randomly updated while the program is running, which is efficient given how memory-intensive the code is.
-
-## Data Structure Operations
-### Core Operations
-- **Create**: Allocate memory or initialize the data structure (e.g., create an array, initialize a linked list, etc.).
-- **Insert**: Add a new element to the data structure at a specific position or the next available slot.
-- **Read**: Access and retrieve an element from the data structure without modifying it.
-- **Update**: Modify the value of an existing element in the data structure.
-- **Delete**: Remove an element from the data structure, potentially shifting other elements to maintain order.
-
-### Basic Operations
-- **Access**: Retrieve an element from a specific index or position in the data structure.
-- **Search**: Find the location of a specific element within the data structure.
-- **Traverse**: Visit each element in the data structure sequentially to perform an operation or gather information.
-- **Copy**: Create a duplicate of the data structure, preserving its elements and structure.
-- **Swap**: Exchange the positions of two elements within the data structure.
-- **Resize**: Adjust the size of the data structure to accommodate more or fewer elements.
-- **Initialize**: Set up the data structure with default values or an initial state.
-- **Compare**: Evaluate two data structures to determine if they are equal or satisfy specific criteria.
-
-### Status Operations
-- **isEmpty**: Determine if the data structure contains no elements.
-- **isFull**: Check if the data structure has reached its maximum capacity (applicable to fixed-size structures like arrays, stacks, or queues).
-- **Count**: Return the current number of elements stored in the data structure.
-- **Capacity**: Provide the maximum number of elements the data structure can hold (for fixed-size structures).
-- **Clear**: Remove all elements from the data structure without deallocating its memory.
-- **isSorted**: Check if the elements in the data structure are arranged in a specific order (e.g., ascending or descending).
-- **isBalanced**: Determine if the data structure satisfies specific balancing criteria (e.g., height-balanced trees).
-- **isCyclic**: Check if the data structure contains any cycles (applicable to graphs or linked lists).
-- **isSymmetric**: Verify if the data structure is symmetric (e.g., a symmetric tree or matrix).
-- **isValid**: Ensure the data structure adheres to its defined constraints or rules (e.g., a valid binary search tree).
-
-### Advanced Operations
-- **Sort**: Arrange the elements of the data structure in a specific order, such as ascending or descending.
-- **Merge**: Combine two or more data structures into one, preserving a specific order or structure.
-- **Split**: Divide a data structure into two or more smaller data structures based on specific criteria.
-- **Reverse**: Rearrange the elements of the data structure in the opposite order.
-- **Rotate**: Shift the elements of the data structure cyclically by a specified number of positions.
+## 資料結構
+資料結構（DS）是一種組織資料以便有效利用資料的方式。
+## 一、資料結構的分類
+### 線性結構（Linear Structures）
+#### 資料呈一條線的關係，每個元素前後最多各有一個相鄰元素
+- 陣列（Array）：固定長度、可隨索引快速存取。
+- 鏈結串列（Linked List）：長度可變、插入刪除方便。
+- 堆疊（Stack）：後進先出（LIFO），如：Undo功能。
+- 佇列（Queue）：先進先出（FIFO），如：排隊系統。
+- 雙端佇列（Deque）：可從兩端加入或移除。
+### 非線性結構（Non-linear Structures）
+#### 資料呈樹狀或網狀關係
+- 樹（Tree）：像家譜結構，用於階層式資料（例如檔案系統）。
+  - 特殊樹：二元樹（Binary Tree）、二元搜尋樹（BST）、AVL樹、堆積（Heap）。
+- 圖（Graph）：節點之間可有任意連線，用於社群網路、路線圖等。
+## 二、資料結構操作
+### 1.陣列（Array）
+### 操作：
+- Access (存取)：透過索引讀取或寫入資料 A[i]  O(1)
+- Insert (插入)：在特定位置插入新元素（可能需要位移其他元素） O(n)
+- Delete (刪除)：刪除特定位置的元素（同樣需位移） O(n)
+- Search (搜尋)：尋找特定值（線性搜尋O(n)或二分搜尋）O(log n)
+### 優缺點：
+- 優點：快速存取（O(1)）
+- 缺點：插入刪除慢（O(n)）
+### 2.鏈結串列（Linked List）
+### 核心操作：
+- Insert：在開頭、結尾或指定節點後插入新節點 O(1)（若節點已知）   O(n)（若需搜尋目標）
+- Delete：移除特定節點  O(1)（若節點已知）   O(n)（若需搜尋目標）
+- Search：逐節點搜尋資料 O(n)
+- Traverse：依序走訪所有節點 O(n)
+### 優缺點
+- 優點：插入、刪除快速（O(1)）
+- 缺點：存取慢（O(n)），無法隨機存取
+### 堆疊（Stack）
 
 ## Type of Data Structures
 ### Primitive Data Structures
@@ -57,7 +46,7 @@ A data structure (DS) is a way of organizing data so that it can be used effecti
     - Linear Data Structures – The data items are ordered in a linear or sequential order in a linear data structure, with each item being directly connected to its neighbors before and after. Some of its examples are – lists, queues, stacks, etc. 
     - Non-Linear Data Structures – This data structure is the opposite of the linear one. Here the data or the elements are arranged in many-one, one-many, or many-many dimensions. It is not single-dimension data like its counterpart. Some examples of non-linear data structures are tables, trees, and graphs.
 
-![Data Structure Classification](./images/Classification.png)
+
 
 ## Performance Analysis
 ### Time complexity
@@ -76,11 +65,7 @@ f(n) = Ω(g (n)) iff there exists positive constant C and (n0) such that  0 <= C
 - **Theta (θ)**: Represents the *tight bound* or *average-case* complexity.  
 f(n) = Θ(g(n)) iff f(n) = O(g(n)) and f(n) = Ω(g(n)), for all n, n >= n0. 
 
-Both time complexity and space complexity can be expressed using asymptotic notation.
-
-#### Time Complexity Function Plot
-![Time Complexity Plot](./images/Complexity.png)  
-*Reference*: [Code to generate the plot](../Utility/timecomplexity.py)
+Both time complexity and space complexity can be expressed using asymptotic notation
 
 ### Terminology
 | Time Complexity | Description       | Example                                                                    |
