@@ -34,25 +34,24 @@
 ### 優缺點
 - 優點：插入、刪除快速（O(1)）
 - 缺點：存取慢（O(n)），無法隨機存取
-### 堆疊（Stack）
-
-## Type of Data Structures
-### Primitive Data Structures
-- Primitive data types correspond to primitive data structures. 
-- The primitive data structures that can store a single value are int, char, float, double, and pointer.
-
-### Non- Primitive Data Structures
-- The non-primitive data structures are of two types:
-    - Linear Data Structures – The data items are ordered in a linear or sequential order in a linear data structure, with each item being directly connected to its neighbors before and after. Some of its examples are – lists, queues, stacks, etc. 
-    - Non-Linear Data Structures – This data structure is the opposite of the linear one. Here the data or the elements are arranged in many-one, one-many, or many-many dimensions. It is not single-dimension data like its counterpart. Some examples of non-linear data structures are tables, trees, and graphs.
-
-
-
-## Performance Analysis
-### Time complexity
-Time complexity quantifies the amount of time an algorithm takes to complete its execution as a function of the input size.
-### Space complexity
-Space complexity quantifies the amount of memory space an algorithm requires during its execution as a function of the input size.
+### 3.堆疊（Stack）
+### 核心操作：
+- Push：把元素放入堆疊頂端
+- Pop：移除堆疊頂端的元素
+- Peek/Top：查看頂端元素但不移除
+- IsEmpty：檢查堆疊是否為空
+### 優缺點
+- 優點：結構簡單、操作容易實作。
+- 缺點：只能存取頂端元素，無法直接存取中間或底部資料
+### 4.佇列（Queue）
+### 核心操作：
+- Enqueue：將元素放入佇列尾端
+- Dequeue：移除佇列前端的元素
+- Front：查看前端元素
+- IsEmpty：檢查是否為空
+### 優點
+- 優點：可避免資料競爭
+- 缺點:存取不靈活
 
 ### Asymptotic Notation
 
