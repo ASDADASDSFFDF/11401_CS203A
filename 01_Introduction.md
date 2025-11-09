@@ -49,10 +49,21 @@
 - Dequeue：移除佇列前端的元素
 - Front：查看前端元素
 - IsEmpty：檢查是否為空
-### 優點
+### 優缺點
 - 優點：可避免資料競爭
 - 缺點:存取不靈活
-
+### 5.樹（Tree）
+### 核心操作：
+- Insert：插入新節點
+- Delete：刪除節點
+- Search：搜尋特定節點
+- Traversal：走訪所有節點
+- -  前序 (Preorder)
+- -  中序 (Inorder)
+- -  後序 (Postorder)
+### 優缺點
+- 優點：階層關係明確
+- 缺點:記憶體開銷大
 ### Asymptotic Notation
 
 Asymptotic notation is used to describe the behavior of an algorithm's time or space complexity as the input size grows. The three main notations are:
