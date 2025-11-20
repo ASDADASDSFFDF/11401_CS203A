@@ -63,7 +63,15 @@
 - -  後序 (Postorder)
 ### 優缺點
 - 優點：階層關係明確
-- 缺點:記憶體開銷大
+- 缺點：記憶體開銷大
+### 6.雜湊表（Hash Table）
+### 核心操作：
+- Insert(key, value)：加入鍵值對
+- Search(key)：依鍵查找
+- Delete(key)：刪除鍵值對
+### 優缺點
+- 優點：搜尋、插入、刪除都非常快（平均 O(1)）,很適合大量資料存取
+- 缺點：嚴重依賴雜湊函數品質,最壞情況可能變 O(n)
 ### Asymptotic Notation
 
 Asymptotic notation is used to describe the behavior of an algorithm's time or space complexity as the input size grows. The three main notations are:
