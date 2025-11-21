@@ -16,7 +16,7 @@
 
 int myHashInt(int key, int m) {
     // TODO: replace with your own design
-    return key % m;  // basic division method
+   return (key % m + m) % m;  // basic division method
 }
 
 int myHashString(const std::string& str, int m) {
