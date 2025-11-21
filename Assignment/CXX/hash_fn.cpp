@@ -20,7 +20,14 @@ int myHashInt(int key, int m) {
 }
 
 int myHashString(const std::string& str, int m) {
+const int p = 31;
     unsigned long hash = 0;
-    // TODO: replace with your own design
-    return static_cast<int>(hash % m);  // basic division method
+    // p_pow 用於儲存 p 的當前冪次 (p^i)，迭代更新以避免昂貴的求冪運算。
+    unsigned long p_pow = 1;
+    // 遍歷字串中的每個字符
+    for (char c : str) {
+        hash = (hash + ((unsigned long)c * p_pow)) % m;
+        p_pow = (p_pow * p) % m;
+    }
+    return static_cast<int>(hash);
 }
