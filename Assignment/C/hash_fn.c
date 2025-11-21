@@ -20,8 +20,32 @@ int myHashInt(int key, int m) {
     return (key % m + m) % m; // 確保正值
 }
 
-int myHashString(const char* str, int m) {
-    unsigned long hash = 0;
+#include "hash_fn.h"
+
+int myHashInt(int key, int m) {
     // TODO: replace with your own design
-    return (int)(hash % m); // basic division method
+    return key % m;  // division method example
+}
+
+int myHashString(const char *str, int m) {
+    // 雜湊算法中使用的素數
+    const int p = 31;
+    // 雜湊值。使用 unsigned long 以確保在計算中間結果時不會溢出 (雖然最終會模 m)。
+    unsigned long hash = 0;
+    // p_pow 用於儲存 p 的當前冪次 (p^i)，迭代更新以避免昂貴的求冪運算。
+    unsigned long p_pow = 1;
+    // 遍歷字串中的每個字符
+    // C 語言中通常使用索引或檢查空字元 '\0' 來遍歷字串。
+    for (size_t i = 0; str[i] != '\0'; i++) {
+        // 獲取當前字符的 ASCII 值
+        unsigned long char_val = (unsigned long)str[i];
+        // 1. (char_val * p_pow) % m : 計算當前項並模 m
+        unsigned long term = (char_val * p_pow) % m;
+        // 2. (hash + term) % m : 將當前項加到總雜湊值中並再次模 m
+        hash = (hash + term) % m;
+        // 更新 p 的冪次：p_pow = (p_pow * p) mod m
+        p_pow = (p_pow * p) % m;
+    }
+    // 將最終的雜湊值轉換為 int 類型並返回
+    return (int)hash;
 }
