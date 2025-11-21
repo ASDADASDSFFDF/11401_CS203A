@@ -1,7 +1,17 @@
 {
-    // 使用 IntelliSense 以得知可用的屬性。
-    // 暫留以檢視現有屬性的描述。
-    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "name": "(Windows) 啟動",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\main.exe", // 確保這裡的名稱與 tasks.json 的輸出一致
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "C/C++: cl.exe 建置專案" // **必須與 tasks.json 中的 "label" 完全匹配**
+        }
+    ]
 }
