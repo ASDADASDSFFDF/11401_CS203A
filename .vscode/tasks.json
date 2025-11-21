@@ -1,19 +1,23 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: cl.exe 建置使用中檔案",
-            "command": "cl.exe",
+            "type": "shell",
+            "label": "C/C++: cl.exe 建置使用中檔案 (最終穩定版)",
+            
+            // 讓 command 直接執行帶有環境變數載入的指令
+            "command": "cmd.exe",
+            
+            // 將所有指令作為一個字串傳入 /C 參數
             "args": [
-                "/Zi",
-                "/EHsc",
-                "/nologo",
-                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "${file}"
+                "/C",
+                // ***** 修正路徑引號與編譯目標檔案 *****
+                "\"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat\" x64 && cl.exe /Zi /EHsc /nologo /Fe${fileDirname}\\${fileBasenameNoExtension}.exe ${file}\""
             ],
+            
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
+            
             "problemMatcher": [
                 "$msCompile"
             ],
@@ -21,7 +25,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "偵錯工具產生的工作。"
+            "detail": "使用 cmd.exe 載入 vcvarsall.bat 環境並編譯"
         }
     ],
     "version": "2.0.0"
