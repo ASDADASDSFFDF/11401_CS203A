@@ -17,7 +17,7 @@
 
 int myHashInt(int key, int m) {
     // TODO: replace with your own design
-    return (key % m + m) % m;  // division method example
+    return (key % m + m) % m; // 確保正值
 }
 
 int myHashString(const char* str, int m) {
