@@ -20,13 +20,6 @@ int myHashInt(int key, int m) {
     return (key % m + m) % m; // 確保正值
 }
 
-#include "hash_fn.h"
-
-int myHashInt(int key, int m) {
-    // TODO: replace with your own design
-    return key % m;  // division method example
-}
-
 int myHashString(const char *str, int m) {
     // 雜湊算法中使用的素數
     const int p = 31;
