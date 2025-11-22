@@ -16,9 +16,8 @@
 #include "hash_fn.h"
 
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
     return (key % m + m) % m; // 確保正值
-}
+    }
 
 int myHashString(const char *str, int m) {
     // 雜湊算法中使用的素數
@@ -27,7 +26,6 @@ int myHashString(const char *str, int m) {
     unsigned long hash = 0;
     // p_pow 用於儲存 p 的當前冪次 (p^i)，迭代更新以避免昂貴的求冪運算。
     unsigned long p_pow = 1;
-    // 遍歷字串中的每個字符
     // C 語言中通常使用索引或檢查空字元 '\0' 來遍歷字串。
     for (size_t i = 0; str[i] != '\0'; i++) {
         // 獲取當前字符的 ASCII 值

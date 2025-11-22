@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: cl.exe 建置專案",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/Fe:",
+                "CXX\\${fileBasenameNoExtension}.exe", // 輸出檔名
+                "CXX\\main.cpp",  // <-- 包含 main.cpp
+                "CXX\\hash_fn.cpp" // <-- 包含 hash_fn.cpp
+            ],
+            "options": {
+                "cwd": "11401_CS203A"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C/C++ 編譯專案檔"
+        }
+    ]
+}

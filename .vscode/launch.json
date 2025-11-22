@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) 啟動",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "11401_CS203A\\main.exe", // 確保這裡的名稱與 tasks.json 的輸出一致
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "11401_CS203A",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "C/C++: cl.exe 建置專案" // **必須與 tasks.json 中的 "label" 完全匹配**
+        }
+    ]
+}
