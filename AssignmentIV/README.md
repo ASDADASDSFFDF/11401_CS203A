@@ -1,4 +1,5 @@
 開頭需要增加一段事先說明你所執行的環境為何？Linux或是Windows，這會影響到你書寫compilation, build, execution這一段的內容
+
 Hash function設計概念及其虛擬碼 (Integer + String)
 Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
 Compilation, build, execution and output
