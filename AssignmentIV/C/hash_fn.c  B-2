@@ -1,7 +1,8 @@
+
 #include "hash_fn.h"
 
 int myHashInt(int key, int m) {
-    return (key % m + m) % m;  // division method example
+    return key % m;
 }
 int myHashString(const char *str, int m) {
     unsigned long hash = 5381;
