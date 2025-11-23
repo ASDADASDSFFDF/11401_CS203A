@@ -3,7 +3,6 @@ a.開頭需要增加一段事先說明你所執行的環境為何？Linux或是W
 b.Hash function設計概念及其虛擬碼 (Integer + String)
 
 c.Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
-
 d.Compilation, build, execution and output
 Windows: 於Makefile.bat所在目錄直接執行 Makefile.bat; Makefile.bat all; Makefile.bat c; Makefile.bat cxx; Makefile.bat clean, 藉此去觀察產生出來的檔案
 
