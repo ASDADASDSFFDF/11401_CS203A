@@ -16,7 +16,7 @@
 
 int myHashInt(int key, int m) {
     // TODO: replace with your own design
-   return (key % m + m) % m;  // 確保正值
+   return key % m;
 }
 
 int myHashString(const std::string& str, int m) {
