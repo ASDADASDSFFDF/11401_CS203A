@@ -1,9 +1,11 @@
-
-
-a.開頭需要增加一段事先說明你所執行的環境為何？Linux或是Windows，這會影響到你書寫compilation, build, execution這一段的內容
-
-b.Hash function設計概念及其虛擬碼 (Integer + String)
-
+a. 環境說明 (Execution Environment)
+作業系統環境 (Operating System): Windows
+編譯器/工具 (Compiler/Tools):OnlineGDB
+b. Hash Function 設計概念及其虛擬碼 (Integer + String)
+1. Integer Key 的 Hash Function 設計
+除法取餘法 (Division Method):h(k) = k (mod m)
+2. String Key 的 Hash Function 設計
+ Rabin-Karp 捲動雜湊（Rolling Hash） 或多項式雜湊（Polynomial Hash） 設計，並使用模數 m 進行壓縮
 c.Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
 
 d.Compilation, build, execution and output
