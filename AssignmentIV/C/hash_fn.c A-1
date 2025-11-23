@@ -30,10 +30,8 @@ int myHashString(const char *str, int m) {
     for (size_t i = 0; str[i] != '\0'; i++) {
         // 獲取當前字符的 ASCII 值
         unsigned long char_val = (unsigned long)str[i];
-        // 1. (char_val * p_pow) % m : 計算當前項並模 m
+        //(char_val * p_pow) % m : 計算當前項並模 m
         unsigned long term = (char_val * p_pow) % m;
-        // 2. (hash + term) % m : 將當前項加到總雜湊值中並再次模 m
-        hash = (hash + term) % m;
         // 更新 p 的冪次：p_pow = (p_pow * p) mod m
         p_pow = (p_pow * p) % m;
     }
