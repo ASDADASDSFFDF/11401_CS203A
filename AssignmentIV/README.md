@@ -1,3 +1,5 @@
+
+
 a.開頭需要增加一段事先說明你所執行的環境為何？Linux或是Windows，這會影響到你書寫compilation, build, execution這一段的內容
 
 b.Hash function設計概念及其虛擬碼 (Integer + String)
