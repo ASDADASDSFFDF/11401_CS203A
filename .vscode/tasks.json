@@ -14,7 +14,7 @@
                 "CXX\\hash_fn.cpp" // <-- 包含 hash_fn.cpp
             ],
             "options": {
-                "cwd": "11401_CS203A"
+                "cwd":"${workspaceRoot}/program.exe"
             },
             "problemMatcher": [
                 "$msCompile"
