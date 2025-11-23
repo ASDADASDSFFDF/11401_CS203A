@@ -5,13 +5,13 @@
             "name": "(Windows) 啟動",
             "type": "cppvsdbg",
             "request": "launch",
-            "program":"${workspaceRoot}/program.exe",//\\main.exe// 確保這裡的名稱與 tasks.json 的輸出一致
+            "program":"${workspaceFolder}/CXX/main.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceRoot}/program.exe",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            "preLaunchTask": "C/C++: cl.exe 建置專案" // **必須與 tasks.json 中的 "label" 完全匹配**
+            "preLaunchTask": "C/C++: cl.exe 建置專案" 
         }
     ]
 }

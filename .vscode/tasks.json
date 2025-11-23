@@ -9,12 +9,12 @@
                 "/Zi",
                 "/EHsc",
                 "/Fe:",
-                "CXX\\${fileBasenameNoExtension}.exe", // 輸出檔名
-                "CXX\\main.cpp",  // <-- 包含 main.cpp
-                "CXX\\hash_fn.cpp" // <-- 包含 hash_fn.cpp
+                "CXX\\${fileBasenameNoExtension}.exe", 
+                "CXX\\main.cpp",  
+                "CXX\\hash_fn.cpp" 
             ],
             "options": {
-                "cwd":"${workspaceRoot}/program.exe"
+                "cwd":"${workspaceFolder}/CXX/main.exe"
             },
             "problemMatcher": [
                 "$msCompile"
