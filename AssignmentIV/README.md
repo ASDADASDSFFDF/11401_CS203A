@@ -5,8 +5,40 @@
 1. Integer Key 的 Hash Function 設計
 除法取餘法 (Division Method):h(k) = k (mod m)
 2. String Key 的 Hash Function 設計
- Rabin-Karp 捲動雜湊（Rolling Hash） 或多項式雜湊（Polynomial Hash） 設計，並使用模數 m 進行壓縮
-c.Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
+- A: 將一個長度不固定的字串 (string) 轉換為一個長度固定的整數 (integer) 索引
+ #### int myHashString(const std::string& str, int m) {
+  #### const int p = 13;
+  ####  unsigned long hash = 0;
+  ####  // p_pow 用於儲存 p 的當前冪次 (p^i)，迭代更新以避免昂貴的求冪運算。
+  ####  unsigned long p_pow = 1;
+  ####  // 遍歷字串中的每個字符
+  ####  for (char c : str) {
+   #### hash = (hash + ((unsigned long)c * p_pow)) % m;
+ ####       p_pow = (p_pow * p) % m;
+   #### }
+   #### return static_cast<int>(hash);
+#### }
+- B: Rabin-Karp 捲動雜湊（Rolling Hash） 或多項式雜湊（Polynomial Hash） 設計，並使用模數 m 進行壓縮
+#### int myHashString(const std::string& str, int m) {
+  ####  unsigned long hash = 5381;
+   #### for (char c : str) {
+   ####     hash =(hash * 33 + c) % m; 
+ ####   }
+   #### return static_cast<int>(hash );
+#### }
+- C: A加B看會發生什麼事
+  
+#### int myHashString(const std::string& str, int m) {
+ ####   unsigned long hash = 5381;
+   ####  const int p = 13;
+   #### unsigned long p_pow = 1;
+  ####  for (char c : str) {
+  ####      hash =((hash * 33 + c)* p_pow) % m; 
+   ####     p_pow = (p_pow * p) % m;
+ ####   }
+####    return static_cast<int>(hash );
+#### }
+## c.Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
 
 d.Compilation, build, execution and output
 Windows: 於Makefile.bat所在目錄直接執行 Makefile.bat; Makefile.bat all; Makefile.bat c; Makefile.bat cxx; Makefile.bat clean, 藉此去觀察產生出來的檔案
