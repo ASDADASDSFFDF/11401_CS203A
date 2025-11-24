@@ -48,3 +48,8 @@
 #### m=11  A1:5  A2:4 B:4 C1:4 C2:4
 #### m=37  A1:1  A2:2 B:2 C1:2 C2:0
 #### 字串鍵：在小表格（m=10、m=11）各組碰撞數相差不大；在較大的 m（37）差異放大：C2 的字串雜湊在 m=37 效果最好（0 碰撞），A1 在 m=11 表現最差（5 次碰撞）。
+## 參考
+- https://yuihuang.com/hash/
+- https://ithelp.ithome.com.tw/m/articles/10326781
+- https://www.hello-algo.com/zh-hant/chapter_hashing/hash_algorithm/#634
+- https://medium.com/@fchern/%E8%A8%AD%E8%A8%88%E9%AB%98%E6%95%88%E8%83%BD%E7%9A%84hash-table-%E4%B8%80-303d9713abab
