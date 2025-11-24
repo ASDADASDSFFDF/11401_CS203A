@@ -1,7 +1,7 @@
-## a. 環境說明 (Execution Environment)
+## 環境說明 (Execution Environment)
 - 作業系統環境 (Operating System): Windows
 - 編譯器/工具 (Compiler/Tools):OnlineGDB
-## b. Hash Function 設計概念及其虛擬碼 (Integer + String)
+## Hash Function 設計概念及其虛擬碼 (Integer + String)
 1. Integer Key 的 Hash Function 設計
 除法取餘法 (Division Method):h(k) = k (mod m)
 2. String Key 的 Hash Function 設計
@@ -18,7 +18,7 @@
    #### }
    #### return static_cast<int>(hash);
 #### }
-- B: Rabin-Karp 捲動雜湊（Rolling Hash） 或多項式雜湊（Polynomial Hash） 設計，並使用模數 m 進行壓縮
+- B:Rabin-Karp 捲動雜湊（Rolling Hash） 或多項式雜湊（Polynomial Hash） 設計，並使用模數 m 進行壓縮
 #### int myHashString(const std::string& str, int m) {
   ####  unsigned long hash = 5381;
    #### for (char c : str) {
@@ -37,7 +37,7 @@
  ####   }
 ####    return static_cast<int>(hash );
 #### }
-## c.Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
+## Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
  #### 整數Hash皆沒有改 
 #### m = 10:10 組碰撞,分佈高度重複
  #### m = 11:8 組碰撞
