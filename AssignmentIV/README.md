@@ -1,7 +1,7 @@
-a. 環境說明 (Execution Environment)
-作業系統環境 (Operating System): Windows
-編譯器/工具 (Compiler/Tools):OnlineGDB
-b. Hash Function 設計概念及其虛擬碼 (Integer + String)
+## a. 環境說明 (Execution Environment)
+- 作業系統環境 (Operating System): Windows
+- 編譯器/工具 (Compiler/Tools):OnlineGDB
+## b. Hash Function 設計概念及其虛擬碼 (Integer + String)
 1. Integer Key 的 Hash Function 設計
 除法取餘法 (Division Method):h(k) = k (mod m)
 2. String Key 的 Hash Function 設計
