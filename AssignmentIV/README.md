@@ -27,7 +27,6 @@
    #### return static_cast<int>(hash );
 #### }
 - C: A加B看會發生什麼事
-  
 #### int myHashString(const std::string& str, int m) {
  ####   unsigned long hash = 5381;
    ####  const int p = 13;
@@ -49,19 +48,3 @@
 #### m=11  A1:5  A2:4 B:4 C1:4 C2:4
 #### m=37  A1:1  A2:2 B:2 C1:2 C2:0
 #### 字串鍵：在小表格（m=10、m=11）各組碰撞數相差不大；在較大的 m（37）差異放大：C2 的字串雜湊在 m=37 效果最好（0 碰撞），A1 在 m=11 表現最差（5 次碰撞）。
-d.Compilation, build, execution and output
-Windows: 於Makefile.bat所在目錄直接執行 Makefile.bat; Makefile.bat all; Makefile.bat c; Makefile.bat cxx; Makefile.bat clean, 藉此去觀察產生出來的檔案
-
-Output: 這部分必須要有截圖的部分，只要是證明確實程式是可以執行的。
-output, 這邊指的就是index value，因此基於key, table size (m)與index value間的關係進行觀察與分析 
-Analysis
-基於README.md template作為指引去發展你的討論軸線，這部分得靠同學們去發揮。如果只有課堂上的範例，參考的數據有限，會局限這部分的討論。建議可以找2種以上的方法會比較有幫助。
-
-另外，不管是透過Google或是Copilot所查找到的設計靈感，請將參考資料或是網路連結給附上，以避免抄襲的可能。
-請同學們務必多花點心思了解撰寫這部分，第一次或許會難一點，做過一次後面就會比較理解你會了什麼。
-
-Reflation
-
-透過所列出的3項作為指引，盡可能去發揮思考hash function的設計特性該如何去拿捏，例如是什麼樣的設計有機會讓collison的次數減少，及其原因。
-
-請同學們務必多花點心思了解撰寫這部分，第一次或許會難一點，做過一次後面就會比較理解你會了什麼
