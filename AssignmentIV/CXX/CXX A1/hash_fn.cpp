@@ -15,16 +15,19 @@
 #include "hash_fn.hpp"
 
 int myHashInt(int key, int m) {
-   return key % m;
+    // TODO: replace with your own design
+   return (key % m + m) % m;  // 確保正值
 }
 
 int myHashString(const std::string& str, int m) {
-    unsigned long hash = 5381;
-     const int p = 13;
+const int p = 13;
+    unsigned long hash = 0;
+    // p_pow 用於儲存 p 的當前冪次 (p^i)，迭代更新以避免昂貴的求冪運算。
     unsigned long p_pow = 1;
+    // 遍歷字串中的每個字符
     for (char c : str) {
-        hash =((hash * 33 + c)* p_pow) % m; 
+        hash = (hash + ((unsigned long)c * p_pow)) % m;
         p_pow = (p_pow * p) % m;
     }
-    return static_cast<int>(hash );
+    return static_cast<int>(hash);
 }

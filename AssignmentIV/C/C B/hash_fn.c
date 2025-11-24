@@ -16,16 +16,14 @@
 #include "hash_fn.h"
 
 int myHashInt(int key, int m) {
-    return key % m;
+     return key % m;
 }
 int myHashString(const char *str, int m) {
     unsigned long hash = 5381;
     int c;
-    const int p = 31;
-    unsigned long p_pow = 1;
+ 
     while ((c = *str++)) {
-        hash = ((hash*33 + c)* p_pow) % m; // hash * 33 + c
-        p_pow = (p_pow * p) % m;
+        hash = (hash*33 + c) % m; // hash * 33 + c
     }
      return hash;
 }
