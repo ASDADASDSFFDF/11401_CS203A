@@ -39,7 +39,16 @@
 ####    return static_cast<int>(hash );
 #### }
 ## c.Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
-
+ #### 整數Hash皆沒有改 
+#### m = 10:10 組碰撞,分佈高度重複
+ #### m = 11:8 組碰撞
+#### m = 37:3 組碰撞,大於鍵值之間的差距,使得哈希值分佈更為均勻
+#### 結論（整數）：表格越大（特別是與鍵數不接近的質數），碰撞越少
+#### 字串Hash
+#### m=10  A1:4  A2:4 B:4 C1:4 C2:4
+#### m=11  A1:5  A2:4 B:4 C1:4 C2:4
+#### m=37  A1:1  A2:2 B:2 C1:2 C2:0
+#### 字串鍵：在小表格（m=10、m=11）各組碰撞數相差不大；在較大的 m（37）差異放大：C2 的字串雜湊在 m=37 效果最好（0 碰撞），A1 在 m=11 表現最差（5 次碰撞）。
 d.Compilation, build, execution and output
 Windows: 於Makefile.bat所在目錄直接執行 Makefile.bat; Makefile.bat all; Makefile.bat c; Makefile.bat cxx; Makefile.bat clean, 藉此去觀察產生出來的檔案
 
