@@ -100,6 +100,8 @@ const int p = 13;
     }
     return static_cast<int>(hash);
 }
+```
+```
 A-2
 int myHashString(const std::string& str, int m) {
 const int p = 31;
@@ -113,6 +115,8 @@ const int p = 31;
     }
     return static_cast<int>(hash);
 }
+```
+```
 B
 int myHashString(const std::string& str, int m) {
     unsigned long hash = 5381;
@@ -122,6 +126,8 @@ int myHashString(const std::string& str, int m) {
     }
     return static_cast<int>(hash );
 }
+```
+```
 C-1
 
 int myHashString(const std::string& str, int m) {
@@ -134,6 +140,8 @@ int myHashString(const std::string& str, int m) {
     }
     return static_cast<int>(hash );
 }
+```
+```
 C-2
 
 int myHashString(const std::string& str, int m) {
@@ -190,7 +198,8 @@ bee     17
 hen     27
 pig     14
 fox     32
-
+```
+```
 A-2
 === String Hash (m = 10) ===
 Key     Index
@@ -233,7 +242,8 @@ bee     20
 hen     17
 pig     8
 fox     19
-
+```
+```
 B
 === String Hash (m = 10) ===
 Key     Index
@@ -276,7 +286,8 @@ bee     19
 hen     13
 pig     7
 fox     25
-
+```
+```
 C-1
 === String Hash (m = 10) ===
 Key     Index
@@ -319,7 +330,8 @@ bee     11
 hen     27
 pig     5
 fox     6
-
+```
+```
 C-2
 === String Hash (m = 10) ===
 Key     Index
