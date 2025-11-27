@@ -53,3 +53,4 @@
 - https://ithelp.ithome.com.tw/m/articles/10326781
 - https://www.hello-algo.com/zh-hant/chapter_hashing/hash_algorithm/#634
 - https://medium.com/@fchern/%E8%A8%AD%E8%A8%88%E9%AB%98%E6%95%88%E8%83%BD%E7%9A%84hash-table-%E4%B8%80-303d9713abab
+- https://gist.github.com/MohamedTaha98/ccdf734f13299efb73ff0b12f7ce429f
