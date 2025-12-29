@@ -16,7 +16,7 @@
 #include "hash_fn.h"
 
 int myHashInt(int key, int m) {
-      return (key % m + m)*13+17 % m;
+      return ((key % m + m)*13+17) % m;
 }
 int myHashString(const char *str, int m) {
     unsigned long hash = 5381;

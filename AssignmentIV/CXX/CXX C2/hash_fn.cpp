@@ -15,7 +15,7 @@
 #include "hash_fn.hpp"
 
 int myHashInt(int key, int m) {
-   rreturn (key % m + m)*17+19 % m;
+   rreturn ((key % m + m)*17+19) % m;
 }
 
 int myHashString(const std::string& str, int m) {
