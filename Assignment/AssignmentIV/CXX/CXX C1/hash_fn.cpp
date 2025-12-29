@@ -19,12 +19,9 @@ int myHashInt(int key, int m) {
 }
 
 int myHashString(const std::string& str, int m) {
-    unsigned long hash = 5381;
-     const int p = 13;
-    unsigned long p_pow = 1;
+    unsigned long hash = 0;
     for (char c : str) {
-        hash =((hash * 33 + c)* p_pow) % m; 
-        p_pow = (p_pow * p) % m;
+        hash += c;
     }
-    return static_cast<int>(hash );
+    return hash % m;
 }
