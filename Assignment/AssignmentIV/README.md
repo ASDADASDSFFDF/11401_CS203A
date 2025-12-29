@@ -26,17 +26,15 @@
  ####   }
    #### return static_cast<int>(hash );
 #### }
-- C: A加B看會發生什麼事
+- C-1 Simple Additive Hash
 #### int myHashString(const std::string& str, int m) {
- ####   unsigned long hash = 5381;
-   ####  const int p = 13;
-   #### unsigned long p_pow = 1;
-  ####  for (char c : str) {
-  ####      hash =((hash * 33 + c)* p_pow) % m; 
-   ####     p_pow = (p_pow * p) % m;
+ ####   unsigned long hash = 0;
+   ####  for (char c : str) {
+   ####   hash += c;}
+  ####   
+  ####  return hash % m;
  ####   }
-####    return static_cast<int>(hash );
-#### }
+- C-2  
 ## Results: 觀察key與index間的關係，觀察index與table size (m)間的關係
  #### 整數Hash皆沒有改 
 #### m = 10:10 組碰撞,分佈高度重複
