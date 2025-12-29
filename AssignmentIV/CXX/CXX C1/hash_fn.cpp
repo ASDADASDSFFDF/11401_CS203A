@@ -15,7 +15,7 @@
 #include "hash_fn.hpp"
 
 int myHashInt(int key, int m) {
-   return key % m; 
+   return (key % m + m)*13+17 % m;
 }
 
 int myHashString(const std::string& str, int m) {

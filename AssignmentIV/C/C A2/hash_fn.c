@@ -16,7 +16,7 @@
 #include "hash_fn.h"
 
 int myHashInt(int key, int m) {
-    return key % m;
+      return (key % m + m)*17+11 % m;
     }
 
 int myHashString(const char *str, int m) {
