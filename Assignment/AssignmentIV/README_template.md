@@ -438,28 +438,23 @@ int myHashString(const std::string& str, int m) {
 C-1
 
 int myHashString(const std::string& str, int m) {
-    unsigned long hash = 5381;
-     const int p = 13;
-    unsigned long p_pow = 1;
+    unsigned long hash = 0;
     for (char c : str) {
-        hash =((hash * 33 + c)* p_pow) % m; 
-        p_pow = (p_pow * p) % m;
+        hash += c;
     }
-    return static_cast<int>(hash );
+    return hash % m;
 }
 ```
 ```
 C-2
 
 int myHashString(const std::string& str, int m) {
-    unsigned long hash = 5381;
-     const int p = 31;
-    unsigned long p_pow = 1;
+    unsigned long hash = 2166136261u;
     for (char c : str) {
-        hash =((hash * 33 + c)* p_pow) % m; 
-        p_pow = (p_pow * p) % m;
+        hash ^= c;
+        hash *= 16777619;
     }
-    return static_cast<int>(hash );
+    return hash % m;
 }
 ```
 ```
@@ -550,8 +545,9 @@ hen     17
 pig     8
 fox     19
 ```
-```
+
 B
+```
 === String Hash (m = 10) ===
 Key     Index
 -----------------
@@ -594,100 +590,100 @@ hen     13
 pig     7
 fox     25
 ```
+C1
 ```
-C-1
 === String Hash (m = 10) ===
 Key     Index
 -----------------
-cat     7
-dog     7
-bat     4
-cow     8
+cat     2
+dog     4
+bat     1
+cow     9
+ant     3
+owl     8
+bee     0
+hen     5
+pig     0
+fox     3
+
+=== String Hash (m = 11) ===
+Key     Index
+-----------------
+cat     4
+dog     6
+bat     3
+cow     10
 ant     4
-owl     3
+owl     8
 bee     3
-hen     2
-pig     7
-fox     6
-
-=== String Hash (m = 11) ===
-Key     Index
------------------
-cat     2
-dog     5
-bat     2
-cow     3
-ant     2
-owl     3
-bee     8
-hen     0
-pig     5
-fox     7
+hen     7
+pig     1
+fox     3
 
 === String Hash (m = 37) ===
 Key     Index
 -----------------
-cat     34
-dog     15
-bat     32
-cow     16
-ant     5
-owl     27
-bee     11
-hen     27
-pig     5
-fox     6
+cat     16
+dog     18
+bat     15
+cow     33
+ant     27
+owl     5
+bee     4
+hen     19
+pig     24
+fox     0
 ```
+C2
 ```
-C-2
 === String Hash (m = 10) ===
 Key     Index
 -----------------
-cat     5
-dog     3
-bat     6
-cow     0
-ant     6
+cat     9
+dog     1
+bat     4
+cow     2
+ant     8
 owl     1
-bee     3
-hen     6
-pig     3
-fox     8
+bee     9
+hen     8
+pig     1
+fox     0
 
 === String Hash (m = 11) ===
 Key     Index
 -----------------
-cat     2
-dog     5
-bat     2
-cow     3
-ant     2
-owl     3
-bee     8
-hen     0
-pig     5
-fox     7
+cat     9
+dog     9
+bat     9
+cow     4
+ant     7
+owl     2
+bee     5
+hen     6
+pig     7
+fox     3
 
 === String Hash (m = 37) ===
 Key     Index
 -----------------
-cat     28
-dog     23
-bat     6
-cow     22
-ant     5
-owl     31
-bee     36
-hen     11
-pig     24
-fox     13
+cat     1
+dog     31
+bat     12
+cow     27
+ant     11
+owl     19
+bee     2
+hen     12
+pig     2
+fox     33
 ```
 
 - 原理：
 - A:不同位置的字元權重不同大幅降低衝突,每個字元對 hash 的影響會被放大
 - B:每加入一個字元，整個 hash 值都會被放大 33 倍。
-- C:A+B
-
+- C1:Simple Additive Hash
+- c2:FNV-1a Hash
 
 
 
