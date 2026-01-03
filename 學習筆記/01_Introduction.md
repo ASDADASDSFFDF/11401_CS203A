@@ -84,35 +84,39 @@
 - 時間複雜度：O(log n)
 - 取得最值（Peek）:直接回傳根節點
 - 時間複雜度:O(1)
-### 優缺點
+### 優缺點:
 - 優點：插入與刪除效率穩定: Insert / Extract 都是 O(log n)
 - 缺點：不適合搜尋任意元素: 搜尋特定值：O(n)
 ### 8.圖(Graph)
+### 核心操作：
+- 新增頂點（Add Vertex）:在圖中加入一個新的節點。
+- 新增邊（Add Edge）:在兩個頂點之間建立連線（可為有向或無向、加權或不加權）。
+- 刪除頂點（Remove Vertex）:移除某個頂點，並同時刪除與其相關的所有邊。
+- 刪除邊（Remove Edge）:移除兩個頂點之間的連線。
+- 圖的遍歷（Traversal）:
+- - 1.DFS（Depth-First Search，深度優先搜尋）
+- - 2.BFS（Breadth-First Search，廣度優先搜尋）
+### 優缺點:
+- 優點:彈性高:可支援有向/無向、加權/不加權、多種應用場景。
+- 缺點:實作較複雜:相比陣列、樹，圖的資料結構與演算法較難理解與實作。
+### 漸近符號
+漸近符號用於描述演算法的時間或空間複雜度隨輸入規模增長而變化的行為。三種主要的漸近符號是：
 
-
-
-
-### Asymptotic Notation
-
-Asymptotic notation is used to describe the behavior of an algorithm's time or space complexity as the input size grows. The three main notations are:
-
-- **Big-O (O)**: Represents the *upper bound* or *worst-case* complexity.  
-f(n) = O(g(n)) iff there exist positive constant C and n0 such that, 0 <= f(n) <= Cg(n) for all n, n >= n0. 
-- **Omega (Ω)**: Represents the *lower bound* or *best-case* complexity.  
-f(n) = Ω(g (n)) iff there exists positive constant C and (n0) such that  0 <= Cg(n) <= f(n) for all n, n >= n0.
-- **Theta (θ)**: Represents the *tight bound* or *average-case* complexity.  
-f(n) = Θ(g(n)) iff f(n) = O(g(n)) and f(n) = Ω(g(n)), for all n, n >= n0. 
-
-Both time complexity and space complexity can be expressed using asymptotic notation
-
-### Terminology
-| Time Complexity | Description       | Example                                                                    |
+- **Big-O (O)**: 表示上界或最壞情況複雜度。  
+f(n) = O(g(n)) 當且僅當存在正常數 C 和 n0，使得對所有 n，n >= n0，0 <= f(n) <= Cg(n)。
+- **Omega (Ω)**: 表示下界或最佳情況複雜度。
+- f(n) = Ω(g(n)) 當且僅當存在正常數 C 和 (n0)，使得對所有 n，n >= n0，0 <= Cg(n) <= f(n)。
+- **Theta (θ)**: 表示緊界或平均情況複雜度。
+- f(n) = Θ(g(n)) 當且僅當對所有 n，n >= n0，f(n) = O(g(n)) 且 f(n) = Ω(g(n))。
+時間複雜度和空間複雜度都可以用漸近符號表示。
+### 術語
+|時間複雜度	 | 描述       | 例子                                                                 |
 |-----------------|-------------------|----------------------------------------------------------------------------|
-| O(1)            | Constant time     | Fetching the first element form a set of data                              |
-| O(log n)        | Logarithmic time  | Splitting a set of data in half, then splitting the halves in half, etc    |
-| O(n)            | Linear time       | Traversing a set of data                                                   |
-| O(n log n)      | Linearithmic time | Splitting a set of data in half repeatedly and traversing each half        |
-| O(n²)           | Quadratic time    | Traversing a set of data once for each member of another set of equal size |
-| O(n³)           | Cubic time        | Calculating the product of two n x n matrices using a triple nested loop      |
-| O(2n)           | Exponential time  | Generating all possible subsets of a set of data                           |
-| O(n!)           | Factorial time    | Generating all possible permutations of a set of data                      |
+| O(1)            | 恆定時間     | 從資料集中取得第一個元素                       |
+| O(log n)        | 對數時間 |將一組資料分成兩半，然後再將這兩半再分成兩半，以此類推。 |
+| O(n)            | 線性時間     | 遍歷資料集                                              |
+| O(n log n)      | 線性時間 |將一組資料重複分成兩半，並遍歷每一半。      |
+| O(n²)           | 二次時間	    | 對大小相同的另一組資料中的每個元素，遍歷該組資料一次 |
+| O(n³)           | 立方時間	| 使用三層嵌套迴圈計算兩個 n×n 矩陣的乘積      |
+| O(2n)           | 指數時間	| 產生資料集的所有可能子集                           |
+| O(n!)           | 階乘時間    | 產生一組資料的所有可能排列組合                 |
