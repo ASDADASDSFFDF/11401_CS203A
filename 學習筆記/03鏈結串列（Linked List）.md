@@ -1,4 +1,4 @@
-### 鏈結串列（Linked List）
+## 鏈結串列（Linked List）
 ### 一、Linked List 的定義
 #### 鏈結串列（Linked List）是一種線性資料結構，由多個**節點（Node）**組成。每個節點包含：
 #### 1.資料（Data）
