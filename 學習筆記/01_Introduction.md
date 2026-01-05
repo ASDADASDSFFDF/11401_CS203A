@@ -121,8 +121,4 @@ f(n) = O(g(n)) 當且僅當存在正常數 C 和 n0，使得對所有 n，n >= n
 | O(2n)           | 指數時間	| 產生資料集的所有可能子集                           |
 | O(n!)           | 階乘時間    | 產生一組資料的所有可能排列組合                 |
 
-#### Time Complexity Function Plot
-![Time Complexity Plot](./images/Complexity.png)  
-*Reference*: [Code to generate the plot](../Utility/timecomplexity.py)
-
 
