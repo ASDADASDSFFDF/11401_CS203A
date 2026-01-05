@@ -31,8 +31,8 @@ Delete	O(1)	O(n)
 ### 六、Hash Table vs BST
 ```
 項目	Hash Table    BST
-搜尋速度  O(1)平均	  O(log n)
-是否排序    否	     是
+搜尋速度  O(1)平均   O(log n)
+是否排序    否	      是
 資料順序    無	      有
 最壞情況  O(n)      O(n)
 ```
