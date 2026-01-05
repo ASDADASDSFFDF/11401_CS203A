@@ -1,4 +1,4 @@
-## 雜湊表（Hash Table）
+/## 雜湊表（Hash Table）
 ### 一、定義
 #### 雜湊表（Hash Table）是一種非線性資料結構，透過 雜湊函數（Hash Function），將鍵（Key）對應到表格中的索引位置
 ### 二、基本組成
@@ -30,11 +30,11 @@ Delete	O(1)	O(n)
 ```
 ### 六、Hash Table vs BST
 ```
-項目	Hash Table	  BST
+項目	Hash Table	     BST
 搜尋速度  O(1)平均	  O(log n)
-是否排序 	否	      是
-資料順序 	無	      有
-最壞情況  O(n)         O(n)
+是否排序 	   否	      是
+資料順序 	   無	      有
+最壞情況  O(n)      O(n)
 ```
 
 
