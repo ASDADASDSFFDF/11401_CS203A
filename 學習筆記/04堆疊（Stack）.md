@@ -1,4 +1,4 @@
-### 堆疊（Stack）
+## 堆疊（Stack）
 ### 一、定義
 #### 堆疊（Stack）是一種線性資料結構，遵循 LIFO（Last In, First Out，後進先出）
 ### 二、基本概念
