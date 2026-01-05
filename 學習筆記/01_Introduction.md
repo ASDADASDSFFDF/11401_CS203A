@@ -120,3 +120,9 @@ f(n) = O(g(n)) 當且僅當存在正常數 C 和 n0，使得對所有 n，n >= n
 | O(n³)           | 立方時間	| 使用三層嵌套迴圈計算兩個 n×n 矩陣的乘積      |
 | O(2n)           | 指數時間	| 產生資料集的所有可能子集                           |
 | O(n!)           | 階乘時間    | 產生一組資料的所有可能排列組合                 |
+
+#### Time Complexity Function Plot
+![Time Complexity Plot](./images/Complexity.png)  
+*Reference*: [Code to generate the plot](../Utility/timecomplexity.py)
+
+
