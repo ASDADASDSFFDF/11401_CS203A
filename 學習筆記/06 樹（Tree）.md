@@ -35,13 +35,34 @@
 - 右子樹所有值 > 根節點
 - 中序走訪（Inorder）結果為遞增序列
 ### 七、時間複雜度
-BST
+1.BST
 ```
 操作	平衡情況	最壞情況
 Search	O(log n)	O(n)
 Insert	O(log n)	O(n)
 Delete	O(log n)	O(n)
 ```
+2. AVL Tree
+```
+操作          平均情況      最壞情況
+Search     O(log n)     O(log n)
+Insert     O(log n)     O(log n)
+Delete     O(log n)     O(log n)
+Rotation   O(1)         O(1)
+```
+3. 紅黑樹
+
+```
+操作          平均情況      最壞情況
+Search     O(log n)     O(log n)
+Insert     O(log n)     O(log n)
+Delete     O(log n)     O(log n)
+Rotation   O(1)         O(1)
+```
+
+
+
+
 
 
 
