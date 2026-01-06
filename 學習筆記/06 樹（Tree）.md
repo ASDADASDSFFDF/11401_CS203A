@@ -16,7 +16,7 @@
 - 子樹（Subtree）本身也是一棵樹
 ### 四、Binary Tree（二元樹）
 #### 定義
-##### 每個節點最多只有兩個子節點，分為：Left Child和Right Child
+##### 每個節點最多只有兩個子節點，分為：左子樹（Left Child）和右子樹(Right Child)
 ### 五、常見 Binary Tree 類型
 #### Full Binary Tree（滿二元樹）:每個節點要嘛有 0 個子節點，要嘛有 2 個
 #### Complete Binary Tree（完全二元樹）:除最後一層外，其餘層皆滿，最後一層由左向右填滿
