@@ -1,7 +1,7 @@
 ## 資料結構學習筆記
 ### 介紹
 #### 本學習筆記概述了基礎資料結構。
-- 簡介
+- [簡介](https://github.com/ASDADASDSFFDF/11401_CS203A/blob/main/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/01_Introduction.md)
 - 陣列：介紹陣列
 - 鍊錶：鍊錶簡介
 - 堆疊：探索堆疊的資料結構
