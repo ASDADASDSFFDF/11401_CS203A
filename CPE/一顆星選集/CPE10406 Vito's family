@@ -1,0 +1,37 @@
+題目概要
+本題的目標是輸出從 Vito Deadstone 的新家 到所有親戚家的最小距離和為多少。
+輸入測資的第一列有一個整數，代表接下來有幾組測資。
+每組測資的第一個整數r代表親戚的數目。 (0 < r < 500)
+接下來的r個整數 (s1,s2,…,sr) 代表各個親戚的門牌號碼。(0 < s < 30000)。
+須注意，親戚的門牌號碼可能會相同。
+參考程式碼 https://weilin1205.github.io/posts/uva10041/
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);//取消 C++ 流與 C stdio 的同步, C++ 用来加速 cin 和 cout 的指令
+    cin.tie(0);//解除 std::cin 與 std::cout 之間的預設綁定, cin 就不會再自動觸發 cout 的清空操作,從而顯著提升執行效率
+
+    int T;  //題目數
+    cin>>T;
+    while(T--) {
+        int r;  //親戚的數目
+        cin>>r;
+
+        int v[501]={};  //用來裝親戚住的街址
+        int res=0;  //results
+
+        for(int i=0;i<r;i++) {
+            cin>>v[i]; 
+        }
+
+        sort(v,v+r);  //升序排列
+        int mid=v[r/2];  //主角要住在中位數的地方
+
+        for(int i=0; i<r; i++) {
+            res+=abs(mid-v[i]);
+        }
+        cout<<res<<"\n";
+    }
+    return 0;
+}
