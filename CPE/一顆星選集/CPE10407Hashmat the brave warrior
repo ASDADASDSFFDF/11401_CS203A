@@ -1,0 +1,18 @@
+題目概要
+每行輸入包含兩個數字。這兩個數字分別表示Hashmat的軍隊或是對手的軍隊的士兵數量，兩者可能顛倒放置。
+輸出兩方士兵數量的差距即可。
+參考程式碼  
+https://weilin1205.github.io/posts/uva10055/
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    long long int a,b;  //測資範圍到2^32，所以不能只用int
+    while(cin>>a>>b) {
+        cout<<abs(b-a)<<"\n";
+    }
+    return 0;
+}
