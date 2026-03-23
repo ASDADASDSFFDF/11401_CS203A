@@ -1,0 +1,46 @@
+題目概要
+有n個整數的序列我們稱為jolly jumper，如果相鄰的2個數其差的絕對值恰好為1到n-1。例如：
+1 4 2 3
+就是jolly jumper（n=4）。因為相鄰2數的差的絕對值為3,2,1，就是1到n-1。但是
+1 4 2 -1 6 
+不是jolly jumper（n=5）。因為相鄰2數的差的絕對值為3,2,3,7，並非1到n-1。
+你的任務是寫一個程式來判斷一個整數序列是否為jolly jumper。
+參考程式碼
+https://hackmd.io/@chingyan/SygMEH4LA
+#include <bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	
+	int i;
+	int n, a1, a2;
+	
+	while (cin >> n) {
+		int a[n+1]={}, b, t = 0;
+		
+		cin >> a1;
+		
+		for (i=1;i<n;i++) {
+			cin >> a2;
+			
+			b = abs(a1-a2);
+			
+			if (a[b] == 0 && b >= 1 && b < n) {
+				a[b] = 1;
+				t++;
+			}
+			
+			a1 = a2;
+		}
+		
+		if (t == n - 1)
+			cout << "Jolly" << endl;
+		else
+			cout << "Not jolly" << endl;
+	}
+
+	return 0;
+}
