@@ -1,5 +1,9 @@
 題目概要
 幫忙統計數量
+輸入資料最多會有 2000 行
+第一行的數字 n 是宣告接下來有幾筆資料
+每一行包含國家名詞和姓名
+假設國家名詞都只有一個單字
 參考程式碼
 https://github.com/weilin1205/UVaSolutions/blob/main/volume104/uva10420_List_of_Conquests.cpp
 #include <bits/stdc++.h>
