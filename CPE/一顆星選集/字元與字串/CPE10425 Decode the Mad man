@@ -1,0 +1,32 @@
+題目概要
+BUET大學有一位老教授就發瘋了。他開始說一些奇怪的話。沒有人能夠聽得懂他的上課內容。
+最終，BUET大學陷入了難題。無法讓這位老教授繼續在大學教書。
+突然有一位學生(肯定是UVA ACM章節的註冊作者，並且在online judge排名很高)創造了一個可以將教授說的話解碼的程式。
+在此之後，老教授又繼續正常的教書，每個人都感到很開心。
+因此，如果你有機會參訪BUET大學，並且看到一位老師正在用裝有語音辨識麥克風講話，你可別嚇到。
+因為現在你的工作就是寫相同的程式來解碼瘋狂老教授的語言。
+參考程式碼 
+https://github.com/weilin1205/UVaSolutions/blob/main/volume102/uva10222_Decode_the_Mad_man.cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s1="`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./";
+    string s2;
+    while(getline(cin,s2))
+    {
+        for(int i=0;i<s2.length();i++) 
+        {   
+            if(s2[i]>='A'&&s2[i]<='Z') 
+                s2[i]=tolower(s2[i]); //將大寫char轉換為小寫char
+
+            if(s2[i]==32||s2[i]==10) { //ASCII Code 32=空白(' '), 10=換行('\n')
+                cout<<s2[i];}
+            else { 
+            //s1.find(s2[i])表示 在s1中去找 和s2[i]這個char_s2一樣的char_s1 返回他(char_s1)在s1的位置
+                cout<<s1[s1.find(s2[i])-2];}
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
