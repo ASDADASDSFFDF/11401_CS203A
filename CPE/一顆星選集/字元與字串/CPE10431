@@ -1,3 +1,36 @@
 題目概要
-
+給你一組方程式和X求微分後的值
+Looking throw the “Online Judge’s Problem Set Archive” I found a very interesting problem number 498, titled “Polly the Polynomial”. Frankly speaking, I did not solve it, but I derived from it this problem.
+Everything in this problem is a derivative of something from 498. In particular, 498 was “... designed to help you remember ... basic algebra skills, make the world a better place, etc., etc.”. This problem is designed to help you remember basic derivation algebra skills, increase the speed in which world becomes a better place, etc., etc.
+In 498 you had to evaluate the values of polynomial
+a0x^n + a1x^n−1 + . . . + an−1x + an.
+In this problem you should evaluate its derivative. Remember that derivative is defined as
+a0nx^n−1 + a1(n − 1)x^n−2 + . . . + an−1.
+All the input and output data will fit into integer, i.e. its absolute value will be less than 2^31.
 參考程式碼 
+https://github.com/weilin1205/UVaSolutions/blob/main/volume102/uva10268_498-bis.cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x;
+    while(cin>>x)
+    {
+        long long int a[200000],f;
+        int n,i;
+        //intput
+        for(n=0;;n++) {
+            cin>>a[n];
+            if(getchar()=='\n') break; }
+        //calculate
+        //f'(x)=((((A0*n)*x+A1*(n-1))*x+A2*(n-2))*)x+......+A[n-2]*2)*x+An-1*1
+        f=a[0]*n;
+        for(int i=1;i<n;i++)
+        {  //每次乘上x後再加上下一項
+            f=f*x+a[i]*(n-i);
+        }
+        //output
+        cout<<f<<"\n";
+    }
+    return 0;
+}
